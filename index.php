@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="theme-assets/css/core/colors/palette-gradient.css">
     	 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   </head>
-  <body class="vertical-layout" data-color="bg-gradient-x-purple-blue">   
+  <body class="vertical-layout" data-color="bg-gradient-x-black-blue">   
     <div class="app-content content">
       <div class="content-wrapper">
         <div class="content-wrapper-before mb-3">
@@ -26,7 +26,7 @@
 				<div class="card-body text-center">
 					<h4 class="mb-2"><strong>Hazn Checker </strong></h4>
 
-					<textarea rows="12" class="form-control text-center form-checker mb-2" placeholder="Place Your Ass"></textarea>
+					<textarea rows="1" class="form-control text-center form-checker mb-2" placeholder="Place Your Ass"></textarea>
 					<textarea rows="1" class="form-control text-center" style="width: 70%; float: left ;"  id="sec" placeholder="sk_live_jHyGGgTfV5hhGwkt7Gja"></textarea>
 					          <select name="gate" id="gate" class="form-control" style="margin-bottom: 5px;"
     <option </option>
@@ -59,13 +59,13 @@
 <center>
 <h5>‎TOTAL :<span class="badge badge-dark float-right carregadas">0</span></h5><hr>
 
-<h5> CHARGED :<span class="badge badge-success float-right charge">0</span></h5><hr>
+<h5>CHARGED :<span class="badge badge-success float-right charge">0</span></h5><hr>
 
-<h5> ‎ CVV :<span class="badge badge-info float-right cvvs">0</span></h5><hr>
+<h5>CVV :<span class="badge badge-info float-right cvvs">0</span></h5><hr>
 
-<h5>  CCN :<span class="badge badge-primary float-right aprovadas">0</span></h5><hr>
+<h5>CCN :<span class="badge badge-primary float-right aprovadas">0</span></h5><hr>
 
-<h5> DEAD :<span class="badge badge-danger float-right reprovadas">0</span></h5><hr>
+<h5>DEAD :<span class="badge badge-danger float-right reprovadas">0</span></h5><hr>
 </center>
 
 
@@ -256,7 +256,6 @@ document.execCommand('copy');           document.body.removeChild(textarea);
 
 $('.btn-play').click(function(){
 var sec = $("#sec").val();
-var cst = $("#cst").val();
 var e = document.getElementById("gate");
 var gate = e.options[e.selectedIndex].value;
 var lista = $('.form-checker').val().trim();
@@ -294,8 +293,8 @@ txt += value + '\n';
 
 $('.form-checker').val(txt.trim());
 // ảo ma hả, đừng lấy code chứ !!
-if(total > 100000000){
-  Swal.fire({title: 'YOU CAN NOT PERFORM THAT ACTION: REDUCE NUMBER OF CARDS TO <4999', icon: 'warning', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
+if(total > 2000){
+  Swal.fire({title: 'YOU CAN NOT PERFORM THAT ACTION: REDUCE NUMBER OF CARDS TO <1000', icon: 'warning', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
   return false;
 }
 
