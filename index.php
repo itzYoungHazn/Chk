@@ -9,6 +9,9 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="theme-assets/css/vendors.css">
     <link rel="stylesheet" type="text/css" href="theme-assets/css/app-lite.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="theme-assets/css/core/menu/menu-types/vertical-menu.css">
     <link rel="stylesheet" type="text/css" href="theme-assets/css/core/colors/palette-gradient.css">
     	 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
