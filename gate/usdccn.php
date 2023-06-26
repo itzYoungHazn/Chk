@@ -1,7 +1,7 @@
 <?php
 ///--------------------Hazn-----------------///
 
-error_reporting(0);
+error_reporting(1);
 date_default_timezone_set('Asia/Jakarta');
 
 
@@ -140,14 +140,16 @@ break;
 
 if(strpos($result2, '"seller_message": "Payment complete."' )) {
     echo 'CHARGED</span>  </span>CC:<br>'.$lista.'</span><br>➤ Message: $1 Charged ✅<br> ➤ Receipt : <a href='.$receipturl.'>Here</a><br>Made By @ihazn_real';
+	exit();
 }
 elseif(strpos($result2,'"cvc_check": "pass"')){
     echo 'CVV</span>  </span>CC:  '.$lista.'</span>  <br>Result: Approve Live</span><br>';
+	exit();
 }
 
 
 elseif(strpos($result1, "generic_decline")) {
-    echo 'DEAD</span>  </span>CC:  '.$lista.'</span>  <br>Result: GENERIC DECLINED</span><br>';
+    echo 'DEAD</span>  </span>CC:  '.$lista.'</span>  <br>Result: GENERIC DECLINED</span><br>'
     }
 elseif(strpos($result2, "generic_decline" )) {
     echo 'DEAD</span>  </span>CC:  '.$lista.'</span>  <br>Result: GENERIC DECLINED</span><br>';
@@ -338,7 +340,4 @@ else {
       
 }
 
-
-curl_close($ch);
-ob_flush();
 ?>
