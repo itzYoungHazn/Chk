@@ -153,7 +153,7 @@
 				<div class="card-body text-center">
 					<h4 class="mb-2"><strong>Hazn Checker </strong></h4>
 
-					<textarea rows="1" class="form-control text-center form-checker mb-2" placeholder="Place Your Ass"></textarea>
+					<textarea rows="12" class="form-control text-center form-checker mb-2" placeholder="Place Your Ass"></textarea>
 					<div class="input-group mb-1">
 					<input type="text" class="form-control" id="sec" placeholder="sk_live_jHyGGgTfV5hhGwkt7Gja"></input>
 					</div>
