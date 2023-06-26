@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="theme-assets/css/core/colors/palette-gradient.css">
     	 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   </head>
-  <body class="vertical-layout" data-color="bg-gradient-x-black-blue">   
+  <body class="vertical-layout" data-color="bg-gradient-x-pink-blue">   
     <div class="app-content content">
       <div class="content-wrapper">
         <div class="content-wrapper-before mb-3">
