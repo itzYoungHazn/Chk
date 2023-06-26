@@ -114,6 +114,8 @@ curl_setopt($ch, CURLOPT_USERPWD, $sk. ':' . '');
 
 curl_setopt($ch, CURLOPT_POSTFIELDS, 'amount=100&currency=usd&payment_method_types[]=card&description=Hazn Donation&payment_method='.$tok1.'&confirm=true&off_session=true');  
 
+sleep(1.5)
+	
 $result2 = curl_exec($ch);  
 
 $tok2 = Getstr($result2,'"id": "','"');  
@@ -145,7 +147,7 @@ if(strpos($result2, '"seller_message": "Payment complete."' )) {
    
     
    
-    echo 'CHARGED</span>  </span>CC:<br> '.$lista.'</span></br>  <br>➤ Response: $1 Charged ✅ <br> Made By @ihazn_real </br> <br> ➤ Receipt : <a href='.$receipturl.'>Here</a><br>';
+    echo 'CHARGED</span>  </span>CC:<br> '.$lista.'</span></br><br>➤ Message: $1 Charged ✅</br><br> ➤ Receipt : <a href='.$receipturl.'>Here</a><br>made by @ihazn_real';
 }
 elseif(strpos($result2,'"cvc_check": "pass"')){
     echo 'CVV</span>  </span>CC:  '.$lista.'</span>  <br>Result: CVV LIVE</span><br>';
