@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="theme-assets/css/core/colors/palette-gradient.css">
     	 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   </head>
-  <body class="vertical-layout" data-color="bg-gradient-x-pink-blue">   
+  <body class="vertical-layout" data-color="bg-gradient-x-purple-blue">   
     <div class="app-content content">
       <div class="content-wrapper">
         <div class="content-wrapper-before mb-3">
@@ -27,7 +27,7 @@
 					<h4 class="mb-2"><strong>Hazn Checker </strong></h4>
 
 					<textarea rows="1" class="form-control text-center form-checker mb-2" placeholder="Place Your Ass"></textarea>
-					<textarea rows="1" class="form-control text-center" style="width: 70%; float: left ;"  id="sec" placeholder="sk_live_jHyGGgTfV5hhGwkt7Gja"></textarea>
+					<textarea rows="12" class="form-control text-center" style="width: 70%; float: center ;"  id="sec" placeholder="sk_live_jHyGGgTfV5hhGwkt7Gja"></textarea>
 					          <select name="gate" id="gate" class="form-control" style="margin-bottom: 5px;"
     <option </option>
 	            
@@ -304,7 +304,7 @@ $('.btn-stop').attr('disabled', false);
 
 line.forEach(function(data){
 var callBack = $.ajax({
-	url: gate + '?lista=' + data + '&sec=' + sec + '&cst=' + cst,
+	url: gate + '?lista=' + data + '&sec=' + sec,
 	success: function(retorno){
 		if(retorno.indexOf("CHARGED") >= 0){
 			$('#lista_charge').append(retorno);
