@@ -28,14 +28,13 @@
 
 					<textarea rows="12" class="form-control text-center form-checker mb-2" placeholder="Place Your Ass"></textarea>
 					<textarea rows="1" class="form-control text-center" style="width: 70%; float: left ;"  id="sec" placeholder="sk_live_jHyGGgTfV5hhGwkt7Gja"></textarea>
-					<textarea rows="1"class="form-control text-center" style="width: 30%; float: right margin-bottom: 5px;" id="cst" placeholder="Amount"></textarea></br>
 					          <select name="gate" id="gate" class="form-control" style="margin-bottom: 5px;"
     <option </option>
 	            
 	            
 				
 				
-			    <option style="background:rgba(16, 15, 154, 0.281);color:rgb(25, 208, 1);color:white" value="gate/eurccn.php">CCN CHARGE 1$</option> 
+			    <option style="background:rgba(16, 15, 154, 0.281);color:rgb(25, 208, 1);color:white" value="gate/usdccn.php">CCN CHARGE 1$</option> 
                <option style="background:rgba(16, 15, 154, 0.281);color:rgb(25, 208, 1);color:white" value="gate/usdcvv.php">CVV CHARGE 1$</option>
 
                 
