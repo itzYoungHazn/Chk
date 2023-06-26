@@ -44,6 +44,9 @@ if (strlen($ano) == 2) $ano = "20$ano";
 //================= [ CURL REQUESTS ] =================//
 
 #-------------------[1st REQ]--------------------#
+
+sleep(5)
+	
 $x = 0;  
 
 while(true)  
@@ -144,7 +147,7 @@ if(strpos($result2, '"seller_message": "Payment complete."' )) {
    
     
    
-    echo 'CHARGED</span>  </span>CC:  '.$lista.'</span>  <br>➤ Response: $1 CCN Charged ✅ Hazn  <br> ➤ Receipt : <a href='.$receipturl.'>Here</a><br>';
+    echo 'CHARGED</span>  </span>CC:<br> '.$lista.'</span></br>  <br>➤ Response: $1 Charged ✅ <br> Made By @ihazn_real </br> <br> ➤ Receipt : <a href='.$receipturl.'>Here</a><br>';
 }
 elseif(strpos($result2,'"cvc_check": "pass"')){
     echo 'CVV</span>  </span>CC:  '.$lista.'</span>  <br>Result: CVV LIVE</span><br>';
