@@ -436,16 +436,19 @@ var callBack = $.ajax({
 	url: gate + '?lista=' + data + '&sec=' + sec,
 	success: function(retorno){
 		if(retorno.indexOf("CHARGED") >= 0){
+			Swal.fire({title: '+1 CHARGED CC', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
 			$('#lista_charge').append(retorno);
 			removelinha();
 			charge = charge +1;
 			}
 			else if(retorno.indexOf("CVV") >= 0){
+			Swal.fire({title: '+1 LIVE CC', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
 			$('#lista_cvvs').append(retorno);
 			removelinha();
 			live = live +1;
 		    }
 			else if(retorno.indexOf("CCN") >= 0){
+                        Swal.fire({title: '+1 CCN CC', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
 			$('#lista_aprovadas').append(retorno);
 			removelinha();
 			lives = lives +1;
