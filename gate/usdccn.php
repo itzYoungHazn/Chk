@@ -1,6 +1,4 @@
 <?php
-
-sleep(5000)
 ///--------------------Hazn-----------------///
 
 
@@ -142,10 +140,7 @@ break;
 //=================== [ RESPONSES ] ===================//
 
 if(strpos($result2, '"seller_message": "Payment complete."' )) {
-   
-    
-   
-    echo 'CHARGED</span>  </span>CC:<br> '.$lista.'</span></br><br>➤ Message: $1 Charged ✅</br><br> ➤ Receipt : <a href='.$receipturl.'>Here</a><br>made by @ihazn_real';
+    echo 'CHARGED</span>  </span>CC:<br>'.$lista.'</span></br><br>➤ Message: $1 Charged ✅</br><br> ➤ Receipt : <a href='[ .$receipturl. ]'>Here</a><br>made by @ihazn_real';
 }
 elseif(strpos($result2,'"cvc_check": "pass"')){
     echo 'CVV</span>  </span>CC:  '.$lista.'</span>  <br>Result: CVV LIVE</span><br>';
