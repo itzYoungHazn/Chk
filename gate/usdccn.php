@@ -5,7 +5,7 @@
 
 
 error_reporting(1);
-date_default_timezone_set('America/Buenos_Aires');
+date_default_timezone_set('Asia/Jakarta');
 
 
 //================ [ FUNCTIONS & LISTA ] ===============//
@@ -113,8 +113,6 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_USERPWD, $sk. ':' . '');  
 
 curl_setopt($ch, CURLOPT_POSTFIELDS, 'amount=100&currency=usd&payment_method_types[]=card&description=Hazn Donation&payment_method='.$tok1.'&confirm=true&off_session=true');  
-
-sleep(1.5)
 	
 $result2 = curl_exec($ch);  
 
