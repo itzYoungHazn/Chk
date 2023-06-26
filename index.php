@@ -27,7 +27,7 @@
 					<h4 class="mb-2"><strong>Hazn Checker </strong></h4>
 
 					<textarea rows="1" class="form-control text-center form-checker mb-2" placeholder="Place Your Ass"></textarea>
-					<textarea rows="12" class="form-control text-center" style="width: 70%; float: center ;"  id="sec" placeholder="sk_live_jHyGGgTfV5hhGwkt7Gja"></textarea>
+					<textarea rows="12" class="form-control text-center" style="width: 70%; float: middle ;"  id="sec" placeholder="sk_live_jHyGGgTfV5hhGwkt7Gja"></textarea>
 					          <select name="gate" id="gate" class="form-control" style="margin-bottom: 5px;"
     <option </option>
 	            
