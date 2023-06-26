@@ -139,12 +139,14 @@ break;
 //=================== [ RESPONSES ] ===================//
 
 if(strpos($result2, '"seller_message": "Payment complete."' )) {
+
+
+	
     echo 'CHARGED</span>  </span>CC:<br>'.$lista.'</span><br>➤ Message: $1 Charged ✅<br> ➤ Receipt : <a href='.$receipturl.'>Here</a><br>Made By @ihazn_real';
-	exit();
 }
 elseif(strpos($result2,'"cvc_check": "pass"')){
+	
     echo 'CVV</span>  </span>CC:  '.$lista.'</span>  <br>Result: Approve Live</span><br>';
-	exit();
 }
 
 
