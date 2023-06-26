@@ -16,7 +16,7 @@
   <body class="vertical-layout" data-color="bg-gradient-x-purple-blue">   
     <div class="app-content content">
       <div class="content-wrapper">
-        <div class="content-wrapper-before mbPussy?       	
+        <div class="content-wrapper-before mb-3">
         </div>        
   <div class="content-body">
   	<div class="mt-2"></div>
