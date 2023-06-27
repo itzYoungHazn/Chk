@@ -360,4 +360,6 @@ else {
       
 }
 
+curl_close($ch);
+ob_flush();
 ?>
