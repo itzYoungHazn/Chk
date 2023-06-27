@@ -26,7 +26,7 @@ EXPOSE 8080
 
 RUN echo "php -S 0.0.0.0:8080 -t /app" >>/1.sh
 
-RUN chmod 755 *
+RUN chmod 755 /1.sh
 
 # Specify the command to run when the container starts
 CMD  /1.sh
