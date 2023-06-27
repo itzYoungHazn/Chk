@@ -23,7 +23,6 @@ function multiexplode($seperator, $string){
     return $two;
     };
 
-$idd = $_GET['idd'];
 $sk = $_GET['sec'];
 $lista = $_GET['lista'];
     $cc = multiexplode(array(":", "|", ""), $lista)[0];
@@ -354,8 +353,7 @@ else {
          
 }
 
-echo '[ IP ] : HIDDEN<br>';
-
 curl_close($ch);
+ob_start();
 ob_flush();
 ?>
