@@ -151,7 +151,7 @@ elseif(strpos($result2,'"cvc_check": "pass"')){
 
 
 elseif(strpos($result1, "generic_decline")) {
-    echo 'DEAD</span>  </span>CC:  '.$lista.'</span>  <br>Result: GENERIC DECLINED</span><br>'
+    echo 'DEAD</span>  </span>CC:  '.$lista.'</span>  <br>Result: GENERIC DECLINED</span><br>';
     }
 elseif(strpos($result2, "generic_decline" )) {
     echo 'DEAD</span>  </span>CC:  '.$lista.'</span>  <br>Result: GENERIC DECLINED</span><br>';
