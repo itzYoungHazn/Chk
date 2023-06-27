@@ -1,7 +1,6 @@
 <?php
-///--------------------Hazn-----------------///
+///--------------------Hazn API-----------------///
 
-sleep(3000);
 error_reporting(1);
 date_default_timezone_set('Asia/Jakarta');
 
