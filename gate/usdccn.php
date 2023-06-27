@@ -354,8 +354,6 @@ else {
          
 }
 
-echo '[ IP ] : HIDDEN';
+echo '<br>[ IP ] : HIDDEN</br>';
 
-curl_close($ch);
-ob_flush();
 ?>
