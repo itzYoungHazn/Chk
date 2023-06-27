@@ -1,149 +1,23 @@
+
 <!DOCTYPE html>
 <html class="loading">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">    
-    <title>Hazn Checker</title>
+    <title>Hazn Checker [Alpha]</title>
     <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="theme-assets/css/vendors.css">
     <link rel="stylesheet" type="text/css" href="theme-assets/css/app-lite.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="theme-assets/css/core/menu/menu-types/vertical-menu.css">
     <link rel="stylesheet" type="text/css" href="theme-assets/css/core/colors/palette-gradient.css">
     	 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   </head>
-	<body class="vertical-layout" style="background-color:#112132;" data-color="bg-gradient-x-purple-blue">   
-  <style>
-		h5,h4{
-			color:white;
-		}
-		.text-center{
-			background-color:#0e1d2c;
-			border:1px solid #525252;
-			border-radius:5px;
-		}
-		textarea{
-			color:white;
-			resize: none;
-		}
-
-		.text-center::placeholder{
-			color:grey;
-		}
-		.text-center:focus{
-			background-color:#0e1d2c;
-		}
-
-		textarea::-webkit-scrollbar {
-  			width: 5px;
- 			background-color: #112132; 
-		}
-
-		textarea::-webkit-scrollbar-thumb {
- 			border-radius: 10px;
-  			background-color: #2e4964; 
-		}
-		.lista_reprovadass{
-			color:#747474;
-		}
-		.card-body{
-			background-color: #1c3044; 
-			border-radius:5px;
-		}
-		.text-center{
-			border:none;
-		}
-		.badge-success,.btn-success{
-			background-color: #ffe74c;
-			color:black	;
-			border:none;
-		}
-		.btn-success:hover{
-			background-color: #c9b63c;
-			border:none;
-			color:black;
-			shadow:hidden;
-		}
-		.aprovadas{
-			background-color: #35a7ff;
-			color:black	;
-		}
-		.badge-danger{
-			background-color: #ff5964;
-			color:black	;
-		}
-		.html body .content .content-wrapper{
-			background-color:#112132;
-		}
-
-		.btn-bg-gradient {
-  			background-image: linear-gradient(to right, #FF8008 0%, #FFC837  51%, #FF8008  100%);
-   			 margin: 5px;
-			 width:49%;
-    		padding: 12px 40px;
-    		text-align: center;
-    		text-transform: uppercase;
-    		transition: 0.5s;
-    		background-size: 200% auto;
-    		color: white;            
-    		box-shadow: 0 0 20px #eee;
-    		border-radius: 5px;
-    		display: block;
-			-webkit-box-shadow: 0 0 0 0 #514a9d;
-  		}
-
-  		.btn-bg-gradient:hover {
-   			background-position: right center; /* change the direction of the change here */
-    		color: #fff;
-    		text-decoration: none;
-  		}
-
-		  .btn-bg-gradient-x {
-			background-image: linear-gradient(to right, #ee0979 0%, #ff6a00  51%, #ee0979  100%);
-            margin: 5px;
-            padding: 12px 45px;
-			
-            text-align: center;
-            text-transform: uppercase;
-            transition: 0.5s;
-            background-size: 200% auto;
-            color: white;            
-            box-shadow: 0 0 20px #eee;
-            border-radius: 5px;
-            display: block;
-			-webkit-box-shadow: 0 0 0 0 #514a9d;
-  		}
-
-  		.btn-bg-gradient-x:hover {
-			background-position: right center; /* change the direction of the change here */
-            color: #fff;
-            text-decoration: none;
-  		}
-
-		  .statusbar{
-			height:320px;
-			padding-top:50px;
-		  }
-		  .hr-statusbar{
-			border:none;
-			height:1px;
-			background-color:#3c5c7c;
-		  }
-		  
-		  option { 
-    /* Whatever color  you want */
-    background-color: #112132;
-	color: white;
-	}
-  </style>
   <body class="vertical-layout" data-color="bg-gradient-x-purple-blue">   
     <div class="app-content content">
       <div class="content-wrapper">
-        <div class="content-wrapper-before mb-3">
+        <div class="content-wrapper-before mb-3">        	
         </div>        
   <div class="content-body">
   	<div class="mt-2"></div>
@@ -151,27 +25,14 @@
 		<div class="col-md-8">
 			<div class="card">
 				<div class="card-body text-center">
-					<h4 class="mb-2"><strong>Hazn Checker </strong></h4>
+					<h4 class="mb-2"><strong>Hazn Checker [BETA]</strong></h4>
 
-					<textarea rows="12" class="form-control text-center form-checker mb-2" placeholder="Place Your Ass"></textarea>
-					<div class="input-group mb-1">
-					<input type="text" class="form-control" id="sec" placeholder="sk_live_jHyGGgTfV5hhGwkt7Gja"></input>
-					</div>
+					<textarea rows="12" class="form-control text-center form-checker mb-2" placeholder="PUT YOUR CARDS HERE"></textarea>
+					<input type="text" class="form-control text-center" id="sec" placeholder="sk_live_xxxxxx"></input>
 					          <select name="gate" id="gate" class="form-control" style="margin-bottom: 5px;"
     <option </option>
-	            
-	            
-				
-				
-			    <option style="background:rgba(16, 15, 154, 0.281);color:rgb(25, 208, 1);color:white" value="gate/usdccn.php">CCN CHARGE 1$</option> 
-               <option style="background:rgba(16, 15, 154, 0.281);color:rgb(25, 208, 1);color:white" value="gate/usdcvv.php">CVV CHARGE 1$</option>
-
-                
-
-              
-             
-                
-                
+	            <option style="background:rgba(16, 15, 154, 0.281);color:rgb(255, 208, 0);color:white" value="gate/usdccn.php">CCN CHARGE $1</option>
+				<option style="background:rgba(16, 15, 154, 0.281);color:rgb(255, 208, 0);color:white" value="gate/usdccv.php">CCV CHARGE $1</option>
 </select>
 	<br>										
 					<button class="btn btn-play btn-glow btn-bg-gradient-x-blue-cyan text-white" style="width: 49%; float: left;"><i class="fa fa-play"></i>START</button>
@@ -179,26 +40,22 @@
 
 
 
-				
+				</div>
 			</div>
 		</div>
 <div class="col-md-4">
   <div class="card mb-2">
   	<div class="card-body">
-<center>
-<h5>‎TOTAL :<span class="badge badge-dark float-right carregadas">0</span></h5><hr>
 
-<h5>CHARGED :<span class="badge badge-success float-right charge">0</span></h5><hr>
+<h5>TOTAL :<span class="badge badge-primary float-right carregadas">0</span></h5><hr>
 
-<h5>CVV :<span class="badge badge-info float-right cvvs">0</span></h5><hr>
+<h5>APPROVED :<span class="badge badge-success float-right charge">0</span></h5><hr>
 
-<h5>CCN :<span class="badge badge-primary float-right aprovadas">0</span></h5><hr>
+<h5>CVV :<span class="badge badge-success float-right cvvs">0</span></h5><hr>
+
+<h5>CCN :<span class="badge badge-success float-right aprovadas">0</span></h5><hr>
 
 <h5>DEAD :<span class="badge badge-danger float-right reprovadas">0</span></h5><hr>
-</center>
-
-
-<center>
 
 
 
@@ -213,9 +70,6 @@
 						<button type="show" class="btn btn-primary btn-sm show-charge"><i class="fa fa-eye-slash"></i></button>
 					<button class="btn btn-success btn-sm btn-copy1"><i class="fa fa-copy"></i></button>					
 					</div>
-					
-					<center>
-					
 					<h4 class="card-title mb-1"><i class="fa fa-check-circle text-success"></i> CHARGED</h4>					
 			<div id='lista_charge'></div>
 				</div>				
@@ -228,10 +82,7 @@
 						<button type="show" class="btn btn-primary btn-sm show-live"><i class="fa fa-eye-slash"></i></button>
 					<button class="btn btn-success btn-sm btn-copy2"><i class="fa fa-copy"></i></button>					
 					</div>
-					
-					<center>
-					
-					<h4 class="card-title mb-1"><i class="fa fa-check text-success"></i> CCV</h4>					
+					<h4 class="card-title mb-1"><i class="fa fa-check text-success"></i> CVV</h4>					
 			<div id='lista_cvvs'></div>
 				</div>				
 			</div>
@@ -243,9 +94,6 @@
 						<button type="show" class="btn btn-primary btn-sm show-lives"><i class="fa fa-eye-slash"></i></button>
 					<button class="btn btn-success btn-sm btn-copy"><i class="fa fa-copy"></i></button>					
 					</div>
-					
-					<center>
-					
 					<h4 class="card-title mb-1"><i class="fa fa-times text-success"></i> CCN</h4>					
 			<div id='lista_aprovadas'></div>
 				</div>				
@@ -258,9 +106,6 @@
 						<button type='hidden' class="btn btn-primary btn-sm show-dies"><i class="fa fa-eye"></i></button>
 					<button class="btn btn-danger btn-sm btn-trash"><i class="fa fa-trash"></i></button>					
 					</div>
-					
-					<center>
-					
 					<h4 class="card-title mb-1"><i class="fa fa-times text-danger"></i> DECLINED</h4>		
 						<div style='display: none;' id='lista_reprovadas'></div>
 				</div>				
@@ -273,10 +118,6 @@
     </div>
  
     <script src="theme-assets/js/core/libraries/jquery.min.js" type="text/javascript"></script>
-    
-    
-
-
 
 <style>
     footer {
@@ -287,7 +128,9 @@
 }
 
 </style>
-
+<footer>
+  <p>Checker By <a href="https://t.me/ihazn_real">@Hazn</a></p>
+</footer>
 <script>
 
 $(document).ready(function(){
@@ -300,8 +143,6 @@ const swalWithBootstrapButtons = Swal.mixin({
   },
   buttonsStyling: false
 })
-
-
     
 $('.show-charge').click(function(){
 var type = $('.show-charge').attr('type');
@@ -385,6 +226,7 @@ document.execCommand('copy');           document.body.removeChild(textarea);
 
 $('.btn-play').click(function(){
 var sec = $("#sec").val();
+var cst = $("#cst").val();
 var e = document.getElementById("gate");
 var gate = e.options[e.selectedIndex].value;
 var lista = $('.form-checker').val().trim();
@@ -392,11 +234,11 @@ var array = lista.split('\n');
 var charge = 0, live = 0, lives = 0, dies = 0, testadas = 0, txt = '';
 
 if(!lista){
-	Swal.fire({title: 'Where the Pussy', icon: 'error', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
+	Swal.fire({title: 'You did not provide a card :(', icon: 'error', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
 	return false;
 }
 
-Swal.fire({title: 'Your cards are being fucked...', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
+Swal.fire({title: 'Your cards are being checked...', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
 
 var line = array.filter(function(value){
 if(value.trim() !== ""){
@@ -422,8 +264,8 @@ txt += value + '\n';
 
 $('.form-checker').val(txt.trim());
 // ảo ma hả, đừng lấy code chứ !!
-if(total > 2000){
-  Swal.fire({title: 'YOU CAN NOT PERFORM THAT ACTION: REDUCE NUMBER OF CARDS TO <1000', icon: 'warning', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
+if(total > 5000){
+  Swal.fire({title: 'YOU CAN NOT PERFORM THAT ACTION: REDUCE NUMBER OF CARDS TO <4999', icon: 'warning', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
   return false;
 }
 
@@ -436,19 +278,16 @@ var callBack = $.ajax({
 	url: gate + '?lista=' + data + '&sec=' + sec,
 	success: function(retorno){
 		if(retorno.indexOf("CHARGED") >= 0){
-			Swal.fire({title: '+1 CHARGED CC', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
 			$('#lista_charge').append(retorno);
 			removelinha();
 			charge = charge +1;
 			}
 			else if(retorno.indexOf("CVV") >= 0){
-			Swal.fire({title: '+1 LIVE CC', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
 			$('#lista_cvvs').append(retorno);
 			removelinha();
 			live = live +1;
 		    }
 			else if(retorno.indexOf("CCN") >= 0){
-                        Swal.fire({title: '+1 CCN CC', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
 			$('#lista_aprovadas').append(retorno);
 			removelinha();
 			lives = lives +1;
