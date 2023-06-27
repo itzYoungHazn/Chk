@@ -21,14 +21,6 @@ RUN apt-get update && apt-get install -y \
 # Copy your website files into the container
 COPY . /app
 
-# RUN FPM
-RUN service php7.3-fpm start
-
-RUN a2enmod proxy_fcgi setenvif
-RUN a2enconf php7.3-fpm
-
-RUN service apache2 start
-
 # Expose the port on which your PHP website runs
 EXPOSE 8080
 
