@@ -1,5 +1,5 @@
 # Use the Ubuntu base image
-FROM debian:buster
+FROM ubuntu:latest
 
 # Set the working directory
 WORKDIR /app
