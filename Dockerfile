@@ -6,26 +6,26 @@ WORKDIR /app
 
 # Update the package lists and install PHP and related packages
 RUN apt-get update && apt-get install -y \
-    php \
-    php-cli \
-    php-fpm \
-    php-mysql \
-    php-curl \
-    php-gd \
-    php-mbstring \
-    php-xml \
-    php-xmlrpc \
-    php-zip \
-    php-intl
+    php7.2 \
+    php7.2-cli \
+    php7.2-fpm \
+    php7.2-mysql \
+    php7.2-curl \
+    php7.2-gd \
+    php7.2-mbstring \
+    php7.2-xml \
+    php7.2-xmlrpc \
+    php7.2-zip \
+    php7.2-intl
 
 # Copy your website files into the container
 COPY . /app
 
 # RUN FPM
-RUN service php8.2-fpm start
+RUN service php7.2-fpm start
 
 RUN a2enmod proxy_fcgi setenvif
-RUN a2enconf php8.2-fpm
+RUN a2enconf php7.2-fpm
 
 RUN service apache2 start
 
