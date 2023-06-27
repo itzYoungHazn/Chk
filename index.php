@@ -49,7 +49,7 @@
 
 <h5>TOTAL :<span class="badge badge-primary float-right carregadas">0</span></h5><hr>
 
-<h5>APPROVED :<span class="badge badge-success float-right charge">0</span></h5><hr>
+<h5>CHARGED :<span class="badge badge-success float-right charge">0</span></h5><hr>
 
 <h5>CVV :<span class="badge badge-success float-right cvvs">0</span></h5><hr>
 
@@ -143,6 +143,8 @@ const swalWithBootstrapButtons = Swal.mixin({
   },
   buttonsStyling: false
 })
+
+
     
 $('.show-charge').click(function(){
 var type = $('.show-charge').attr('type');
@@ -226,7 +228,6 @@ document.execCommand('copy');           document.body.removeChild(textarea);
 
 $('.btn-play').click(function(){
 var sec = $("#sec").val();
-var cst = $("#cst").val();
 var e = document.getElementById("gate");
 var gate = e.options[e.selectedIndex].value;
 var lista = $('.form-checker').val().trim();
@@ -264,7 +265,7 @@ txt += value + '\n';
 
 $('.form-checker').val(txt.trim());
 // ảo ma hả, đừng lấy code chứ !!
-if(total > 5000){
+if(total > 100000000){
   Swal.fire({title: 'YOU CAN NOT PERFORM THAT ACTION: REDUCE NUMBER OF CARDS TO <4999', icon: 'warning', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
   return false;
 }
@@ -275,7 +276,7 @@ $('.btn-stop').attr('disabled', false);
 
 line.forEach(function(data){
 var callBack = $.ajax({
-	url: gate + '?lista=' + data + '&sec=' + sec,
+	url: gate + '?lista=' + data + '&sec=' + sec + '&cst=' + cst,
 	success: function(retorno){
 		if(retorno.indexOf("CHARGED") >= 0){
 			$('#lista_charge').append(retorno);
