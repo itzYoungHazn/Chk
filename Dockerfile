@@ -24,5 +24,7 @@ COPY . /app
 # Expose the port on which your PHP website runs
 EXPOSE 8080
 
+RUN echo "php -S 0.0.0.0:8080 -t /app" >>/1.sh
+
 # Specify the command to run when the container starts
-CMD ["php", "-S", "0.0.0.0:8080", "-t", "/app"]
+CMD  /1.sh
