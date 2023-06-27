@@ -24,8 +24,8 @@ COPY . /app
 # RUN FPM
 RUN service php8.2-fpm start
 
-RUN a2enmod proxy_fcgi setenvif \
-    a2enconf php8.2-fpm
+RUN a2enmod proxy_fcgi setenvif
+RUN a2enconf php8.2-fpm
 
 # Expose the port on which your PHP website runs
 EXPOSE 8080
