@@ -355,10 +355,10 @@ elseif(strpos($result1, "card_not_supported" )) {
 }
 else {
     echo 'DEAD</span> CC:  '.$lista.'</span>  <br>Result: INCREASE AMOUNT OR TRY ANOTHER CARD</span><br>';
-   
-   
-      
+         
 }
+
+echo '[ IP ] : HIDDEN'
 
 curl_close($ch);
 ob_flush();
