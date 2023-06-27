@@ -1,5 +1,5 @@
-# Use the Ubuntu base image
-FROM ubuntu:latest
+# Use the Debian base image
+FROM debian:latest
 
 # Set the working directory
 WORKDIR /app
