@@ -185,7 +185,7 @@ elseif(strpos($result,"fraudulent")){
 
 elseif(strpos($result2,'"code": "incorrect_cvc"')){
     echo '𝘾𝘾𝙉</span>  </span>CC:  '.$lista.'</span>  <br>Result: Security code is incorrect</span><br>';
-	exit():
+	exit();
 }
 elseif(strpos($result1,' "code": "invalid_cvc"')){
     echo '𝘾𝘾𝙉</span>  </span>CC:  '.$lista.'</span>  <br>Result: Security code is incorrect</span><br>';
