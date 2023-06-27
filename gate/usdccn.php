@@ -1,7 +1,7 @@
 <?php
 ///--------------------Hazn API-----------------///
 
-error_reporting(1);
+error_reporting(0);
 date_default_timezone_set('Asia/Jakarta');
 
 
@@ -139,77 +139,73 @@ break;
 //=================== [ RESPONSES ] ===================//
 
 if(strpos($result2, '"seller_message": "Payment complete."' )) {
+    echo 'CHARGED</span>  </span>CC:<br>'.$lista.'</span><br>➤ Message: $1 Charged ✅<br>➤ Receipt : <a href='.$receipturl.'>Here</a></br>➤ Made By @ihazn_real';
 
-
-	
-    echo 'CHARGED</span>  </span>CC:<br>'.$lista.'</span><br>➤ Message: $1 Charged ✅<br> ➤ Receipt : <a href='.$receipturl.'>Here</a></br><br>Made By @ihazn_real</br>';
-exit();
 }
 elseif(strpos($result2,'"cvc_check": "pass"')){
 	
     echo 'CVV</span>  </span>CC:  '.$lista.'</span>  <br>Result: Approve Live</span><br>';
-exit();
+
 }
 
 
 elseif(strpos($result1, "generic_decline")) {
     echo 'DEAD</span>  </span>CC:  '.$lista.'</span>  <br>Result: GENERIC DECLINED</span><br>';
-	exit();
+	
     }
 elseif(strpos($result2, "generic_decline" )) {
     echo 'DEAD</span>  </span>CC:  '.$lista.'</span>  <br>Result: GENERIC DECLINED</span><br>';
-	exit();
+
 }
 elseif(strpos($result2, "insufficient_funds" )) {
     echo 'CVV</span>  </span>CC:  '.$lista.'</span>  <br>Result: INSUFFICIENT FUNDS</span><br>';
-	exit();
+	
 }
 
 elseif(strpos($result2, "fraudulent" )) {
     echo 'DEAD</span>  </span>CC:  '.$lista.'</span>  <br>Result: FRAUDULENT</span><br>';
-	exit();
+
 }
 elseif(strpos($resul3, "do_not_honor" )) {
     echo 'DEAD</span>  </span>CC:  '.$lista.'</span>  <br>Result: DO NOT HONOR</span><br>';
-	exit();
+
     }
 elseif(strpos($resul2, "do_not_honor" )) {
     echo 'DEAD</span>  </span>CC:  '.$lista.'</span>  <br>Result: DO NOT HONOR</span><br>';
-	exit();
+	
 }
 elseif(strpos($result,"fraudulent")){
     echo 'DEAD</span>  </span>CC:  '.$lista.'</span>  <br>Result: FRAUDULENT</span><br>';
-	exit();
+	
 
 }
 
 elseif(strpos($result2,'"code": "incorrect_cvc"')){
     echo '𝘾𝘾𝙉</span>  </span>CC:  '.$lista.'</span>  <br>Result: Security code is incorrect</span><br>';
-	exit();
+	
 }
 elseif(strpos($result1,' "code": "invalid_cvc"')){
     echo '𝘾𝘾𝙉</span>  </span>CC:  '.$lista.'</span>  <br>Result: Security code is incorrect</span><br>';
-	exit();
+
      
 }
 elseif(strpos($result1,"invalid_expiry_month")){
     echo 'DEAD</span>  </span>CC:  '.$lista.'</span>  <br>Result: INVAILD EXPIRY MONTH</span><br>';
-	exit();
 
 }
 elseif(strpos($result2,"invalid_account")){
     echo 'DEAD</span>  </span>CC:  '.$lista.'</span>  <br>Result: INVAILD ACCOUNT</span><br>';
-	exit();
+	
 
 }
 
 elseif(strpos($result2, "do_not_honor")) {
     echo 'DEAD</span>  </span>CC:  '.$lista.'</span>  <br>Result: DO NOT HONOR</span><br>';
-	exit();
+	
 }
 elseif(strpos($result2, "lost_card" )) {
     echo 'DEAD</span>  </span>CC:  '.$lista.'</span>  <br>Result: LOST CARD</span><br>';
-	exit();
+	
 }
 elseif(strpos($result2, "lost_card" )) {
     echo 'DEAD</span>  </span>CC:  '.$lista.'</span>  <br>Result: LOST CARD</span></span>  <br>Result: CHECKER BY checker</span> <br>';
