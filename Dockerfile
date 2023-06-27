@@ -1,5 +1,5 @@
 # Use the Ubuntu base image
-FROM ubuntu:latest
+FROM debian:latest
 
 # Set the working directory
 WORKDIR /app
@@ -20,6 +20,9 @@ RUN apt-get update && apt-get install -y \
 
 # Copy your website files into the container
 COPY . /app
+
+# RUN FPM
+RUN service php7.4-fpm start
 
 # Expose the port on which your PHP website runs
 EXPOSE 8080
