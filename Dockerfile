@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y \
 COPY . /app
 
 # RUN FPM
-RUN service php7.4-fpm start
+RUN service php8.2-fpm start
 
 # Expose the port on which your PHP website runs
 EXPOSE 8080
