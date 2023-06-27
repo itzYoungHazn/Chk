@@ -22,10 +22,10 @@ RUN apt-get update && apt-get install -y \
 COPY . /app
 
 # RUN FPM
-RUN service php7.2-fpm start
+RUN service php7.3-fpm start
 
 RUN a2enmod proxy_fcgi setenvif
-RUN a2enconf php7.2-fpm
+RUN a2enconf php7.3-fpm
 
 RUN service apache2 start
 
