@@ -1,22 +1,22 @@
 # Use the Ubuntu base image
-FROM debian:latest
+FROM debian:buster
 
 # Set the working directory
 WORKDIR /app
 
 # Update the package lists and install PHP and related packages
 RUN apt-get update && apt-get install -y \
-    php7.2 \
-    php7.2-cli \
-    php7.2-fpm \
-    php7.2-mysql \
-    php7.2-curl \
-    php7.2-gd \
-    php7.2-mbstring \
-    php7.2-xml \
-    php7.2-xmlrpc \
-    php7.2-zip \
-    php7.2-intl
+    php \
+    php-cli \
+    php-fpm \
+    php-mysql \
+    php-curl \
+    php-gd \
+    php-mbstring \
+    php-xml \
+    php-xmlrpc \
+    php-zip \
+    php-intl
 
 # Copy your website files into the container
 COPY . /app
