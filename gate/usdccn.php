@@ -142,7 +142,7 @@ if(strpos($result2, '"seller_message": "Payment complete."' )) {
 
 
 	
-    echo 'CHARGED</span>  </span>CC:<br>'.$lista.'</span><br>➤ Message: $1 Charged ✅<br> ➤ Receipt : <a href='.$receipturl.'>Here</a>Made By @ihazn_real</br>';
+    echo 'CHARGED</span>  </span>CC:<br>'.$lista.'</span><br>➤ Message: $1 Charged ✅<br> ➤ Receipt : <a href='.$receipturl.'>Here</a></br><br>Made By @ihazn_real</br>';
 exit();
 }
 elseif(strpos($result2,'"cvc_check": "pass"')){
