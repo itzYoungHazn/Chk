@@ -108,7 +108,7 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 
 curl_setopt($ch, CURLOPT_USERPWD, $sk. ':' . '');  
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'amount=100&currency=usd&payment_method_types[]=card&description=Hazn Donation&payment_method='.$tok1.'&confirm=true&off_session=true');  
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'amount=100&currency=usd&payment_method_types[]=card&description=Hazn Donation&payment_method='.$tok1.'&confirm=true&off_session=false');  
 	
 $result2 = curl_exec($ch);  
 
@@ -138,7 +138,7 @@ break;
 //=================== [ RESPONSES ] ===================//
 
 if(strpos($result2, '"seller_message": "Payment complete."' )) {
-    echo 'CHARGED</span>  </span>CC:<br>'.$lista.'</span><br>➤ Message: $1 Charged ✅<br>➤ Receipt : <a href='.$receipturl.'>Here</a></br>➤ Made By @ihazn_real';
+    echo 'CHARGED</span>  </span>CC:<br>'.$lista.'</span><br>➤ Message: Approve $1 Charged ✅<br>➤ Receipt : <a href='.$receipturl.'>Here</a></br>➤ Made By @hazn_xd';
 
 }
 elseif(strpos($result2,'"cvc_check": "pass"')){
@@ -354,6 +354,5 @@ else {
 }
 
 curl_close($ch);
-ob_start();
 ob_flush();
 ?>
