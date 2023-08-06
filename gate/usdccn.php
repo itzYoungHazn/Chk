@@ -353,6 +353,8 @@ else {
          
 }
 
+echo "Bypassing: $x<br>";
+
 curl_close($ch);
 ob_flush();
 ?>
