@@ -1,32 +1,36 @@
-# Use the Debian base image
-FROM debian:latest
+# Use an official PHP runtime as the base image
+FROM php:8.2-apache
 
-# Set the working directory
-WORKDIR /app
+# Set the working directory in the container
+WORKDIR /var/www/html
 
-# Update the package lists and install PHP and related packages
+# Copy the PHP application files to the working directory
+COPY . /var/www/html
+
+# Install any necessary dependencies
 RUN apt-get update && apt-get install -y \
-    php \
-    php-cli \
-    php-fpm \
-    php-mysql \
-    php-curl \
-    php-gd \
-    php-mbstring \
-    php-xml \
-    php-xmlrpc \
-    php-zip \
-    php-intl
+    libpng-dev \
+    libjpeg-dev \
+    libonig-dev \
+    libxml2-dev \
+    zip \
+    unzip
 
-# Copy your website files into the container
-COPY . /app
+# Enable necessary PHP extensions
+RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
-# Expose the port on which your PHP website runs
-EXPOSE 8080
+# Enable Apache mod_rewrite for clean URLs
+RUN a2enmod rewrite
 
-RUN echo "php -S 0.0.0.0:8080 -t /app" >>/1.sh
+# Set recommended PHP.ini settings
+RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
-RUN chmod 755 /1.sh
+# Expose port 80 for HTTP traffic
+EXPOSE 80
 
-# Specify the command to run when the container starts
-CMD  /1.sh
+RUN chmod -R 777 *
+
+RUN ls -l
+
+# Start the Apache server
+CMD ["apache2-foreground"]
